@@ -1,0 +1,42 @@
+structură de bază de date pentru un adăpost de animale:
+
+animale {
+_id: ObjectId,
+"nume": string,
+"specie": string,
+"rasa": string,
+"varsta": integer,
+"gen": string,
+"disponibil": boolean,
+"greutate": double,
+"fotografie": binary,
+"vaccinari": [
+{
+"_id": ObjectId,
+"nume_vaccin": string,
+"data_vaccin": date
+}
+]
+}
+
+adoptii {
+_id: ObjectId,
+"id_animal": ObjectId,
+"id_persoana": ObjectId,
+"data": date,
+"status": string
+}
+
+persoane {
+_id: ObjectId,
+"nume": string,
+"prenume": string,
+"date_contact":
+	{
+	"adresa": string,
+	"telefon": string, //regular expression
+	"email": string, //regular expression
+	"oras":string
+	}
+}
+
